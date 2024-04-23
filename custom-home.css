@@ -1,0 +1,250 @@
+.page-main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: var(--color-primary);
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 60%;
+    max-width: 80%;
+}
+
+.main-content-container {
+    width: 100%;
+}
+
+.content-container {
+    width: 100%;
+}
+
+#header {
+    border-bottom: 1px solid var(--color-primary) !important;
+}
+
+.home-page-top-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.home-page-title {
+    margin: 0;
+    font-size: 54px;
+    color: white;
+    font-weight: 700;
+    margin-top: 10rem;
+    margin-bottom: 2rem;
+}
+
+.custom-search-bar.search-active:focus-within .custom-search-bar-suggestions-card {
+    display: block;
+}
+
+.custom-search-bar {  
+    padding: 10px;
+    width: 100%;
+    max-width: 34rem;                
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);  
+    position: relative;
+    z-index: 2;
+}
+
+.custom-search-bar #header-search-box-button{
+    position: absolute;
+    z-index: 4;
+    inset-inline-start: 21px;
+    top: 21px;
+    color: var(--color-primary);
+    opacity: 1;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.custom-search-bar input {
+    background-color: rgba(255, 255, 255, 0.75);
+    border: 1px solid var(--color-primary);
+    border-radius: 60px;
+    color: var(--color-primary);
+    font-size: 16px;
+    z-index: 2;
+    height: auto;
+    padding: 14px;
+    padding-inline-start: 50px;
+    width: 100%;
+}
+
+.custom-search-bar input::placeholder {
+    color: var(--color-primary);
+    opacity: .8;
+}
+
+.custom-search-bar-suggestions-card {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    margin-left: -48px;
+    margin-right: -48px;
+    padding-top: 72px;
+    border-radius: 3px;
+    box-shadow: 0 2px 2px 1px rgba(0, 0, 0, .13);
+    transform-origin: top center;
+    opacity: .5;
+    transform: scale(0.9);
+}
+
+
+.sections-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.new-card {
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 1px 6px -1px rgba(0, 0, 0, .1);
+    border-radius: 3px;
+    break-inside: avoid;
+}
+
+.mb-xl-new {
+    margin-bottom: 32px;
+}
+
+.new-card-title {
+    padding: 16px 16px 8px;
+    margin: 0;
+    font-size: 14px;
+    color: var(--color-primary);
+    fill: var(--color-primary);
+    font-weight: 400;
+}
+
+.explenation-container {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.new-text {
+    padding: 8px 16px 6px;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.new-text2 {
+    padding: 12px 16px 6px;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.new-list {
+    margin: 0;
+    padding-top: 6px;
+    padding-bottom: 12px;
+}
+
+.new-list-item {
+    padding: 0px 16px 4px;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+/* Popular Links Section */
+
+.home-page-popular-links {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.popular-links-title {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.popular-links-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 1rem;
+    justify-content: center;
+    align-content: center;
+    width: 50%;
+    min-width: 26rem;
+    max-width: 32rem;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
+.popular-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+}
+
+.link-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    width: 46px;
+    height: 46px;
+    margin-bottom: 8px;
+    font-size: 28px;
+}
+
+.link-icon svg {
+    margin: 0;
+    margin-bottom: 2px;
+}
+
+.link-text {
+    color: #ffffff;
+}
+
+/* Reactive styles */
+
+@media (max-width: 600px) {
+    .popular-links-grid {
+        grid-template-columns: repeat(2, 1fr);
+        width: 50%;
+        min-width: 16rem;
+        max-width: 20rem;
+        margin-bottom: 3rem;
+    }
+
+    .home-page-title {
+        font-size: 50px;
+        margin-top: 6rem;
+    }
+
+    .sections-container {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .mb-xl-new {
+        margin-bottom: 0;
+    }
+}
